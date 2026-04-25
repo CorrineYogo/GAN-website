@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GAN Greenspace Action and Network</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<button id="scrollBtn" class="scroll-btn">
+  <span id="scrollIcon">↑</span>
+</button>
+<body>
+
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="GAN Logo" />
+      <span>GAN</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-ctas">
+      <a href="volunteer.html" class="btn-outline">Volunteer</a>
+      <a href="donate.html" class="btn-solid">Donate</a>
+    </div>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="team.html">Team</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="donate.html">Donate</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+  <!-- CAROUSEL SLIDES -->
+  <div class="hero-carousel" aria-hidden="true">
+    <div class="carousel-slide active" style="background-image: url('/images/gallery8.jpeg')"></div>
+    <div class="carousel-slide" style="background-image: url('/images/gallery47.jpeg')"></div>
+    <div class="carousel-slide" style="background-image: url('/images/Environmentrestoration.jpeg')"></div>
+    <div class="carousel-slide" style="background-image: url('/images/communitywork.jpeg')"></div>
+    <div class="carousel-slide" style="background-image: url('/images/Jamii.jpeg')"></div>
+  </div>
+
+  <!-- Gradient overlay always on top of images -->
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    
+    <h1 class="hero-title">
+     <em>Together,</em><br/>We can make a differnce.
+    </h1>
+    <p class="hero-sub">We mobilise youth to drive sustainability initiatives across Kenya and beyond.</p>
+    <div class="hero-btns">
+      <a href="volunteer.html" class="btn-hero-primary">Join the Movement</a>
+      <a href="#ourStory" class="btn-hero-ghost">Our Story ↓</a>
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">2021</span><span class="stat-label">Founded</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">5</span><span class="stat-label">Core Programs</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">SDGs</span><span class="stat-label">Aligned</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">Kenya</span><span class="stat-label">Registered NGO</span></div>
+    </div>
+
+    <!-- CAROUSEL DOTS — sit directly below the stats -->
+    <div class="carousel-dots" role="tablist" aria-label="Hero image navigation">
+      <button class="dot active" role="tab" aria-selected="true"  aria-label="Slide 1" data-index="0"></button>
+      <button class="dot"        role="tab" aria-selected="false" aria-label="Slide 2" data-index="1"></button>
+      <button class="dot"        role="tab" aria-selected="false" aria-label="Slide 3" data-index="2"></button>
+      <button class="dot"        role="tab" aria-selected="false" aria-label="Slide 4" data-index="3"></button>
+      <button class="dot"        role="tab" aria-selected="false" aria-label="Slide 5" data-index="4"></button>
+    </div>
+  </div>
+
+</section>
+
+<!-- MISSION STRIP -->
+<section class="mission-strip">
+  <div class="mission-inner">
+    <p>"<strong>Empowered communities with sustainable livelihoods</strong> driving inclusive transformation."</p>
+    <span class="mission-tag">Our Vision</span>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="what-we-do">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">What We Do</span>
+      <h2>Five Programs. One Mission.</h2>
+      <p>Every program is designed to build youth capacity, restore ecosystems, and drive lasting community change.</p>
+    </div>
+    <div class="programs-grid">
+
+        <div class="program-card">
+          <div class="program-bg program-bg-1"></div>
+          <div class="program-overlay"></div>
+          <div class="program-content">
+            <span class="program-number">01</span>
+            <h3>Tujenge Jamii Program</h3>
+            <p>Community led climate resilience, water security &amp; disaster risk reduction.</p>
+            <a href="programs.html#tujenge" class="program-link">Learn More →</a>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="program-bg program-bg-2"></div>
+          <div class="program-overlay"></div>
+          <div class="program-content">
+            <span class="program-number">02</span>
+            <h3>Climate Fellowship</h3>
+            <p>Nurturing the next generation of youth climate leaders, advocates, and innovators.</p>
+            <a href="programs.html#fellowship" class="program-link">Learn More →</a>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="program-bg program-bg-3"></div>
+          <div class="program-overlay"></div>
+          <div class="program-content">
+            <span class="program-number">03</span>
+            <h3>Applied Innovation</h3>
+            <p>Developing and scaling climate-smart technologies for community adaptation.</p>
+            <a href="programs.html#innovation" class="program-link">Learn More →</a>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="program-bg program-bg-4"></div>
+          <div class="program-overlay"></div>
+          <div class="program-content">
+            <span class="program-number">04</span>
+            <h3>Eco-Diplomacy</h3>
+            <p>Strengthening climate governance and policy engagement at local to global levels.</p>
+            <a href="programs.html#diplomacy" class="program-link">Learn More →</a>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="program-bg program-bg-5"></div>
+          <div class="program-overlay"></div>
+          <div class="program-content">
+            <span class="program-number">05</span>
+            <h3>Environmental Restoration</h3>
+            <p>Restoring degraded ecosystems, forests, wetlands, and biodiversity for lasting impact.</p>
+            <a href="programs.html#restoration" class="program-link">Learn More →</a>
+          </div>
+        </div>
+
+      </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     OUR STORY SECTION - With Carousel for Impact Stats
+     Add this to index.html after the programs section
+     ===================================================== -->
+
+<section class="story-section">
+  <div class="container">
+    
+    <!-- STORY INTRO -->
+    <div class="section-header" id="ourStory" style="margin-bottom: 4rem;">
+      <span class="section-tag">Our Journey</span>
+      <h2>How GAN Began</h2>
+      <p>From identifying a problem to building a movement of 3,000+ young people shaping Kenya's climate future.</p>
+    </div>
+
+    <!-- ===== STORY BLOCK 1: Why We Started ===== -->
+    <div class="story-block">
+      <div class="story-grid">
+        <div class="story-card-visual">
+          <div class="story-bg-image" style="background: linear-gradient(135deg, #2d6a4f 0%, #1a3a2a 100%);">
+            <div class="story-stat-overlay">
+              <div class="stat-item">
+                <span class="stat-big">75%</span>
+                <span class="stat-label">Under 35 years</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-big">80%</span>
+                <span class="stat-label">ASAL Lands</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="story-card-content">
+          
+          <h3>In a country where climate change is real...</h3>
+          <p>Over 75% of Kenya's population is under 35. Nearly 80% of the country is classified as ASAL (Arid and Semi-Arid Lands)The areas most vulnerable to climate shocks.</p>
+          <p>Yet those experiencing climate change daily were excluded from decisions shaping their future.</p>
+          <div class="story-highlight">
+            <p><strong>We saw:</strong> Ideas without access. Resilience without recognition. Policies written <em>about</em> youth, but rarely <em>with</em> them.</p>
+          </div>
+          <p style="margin-top: 1.5rem; font-weight: 600; color: var(--green-dark);">So we began with a simple belief: <br>Those most affected must have the power to be heard.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== STORY BLOCK 2: The Birth ===== -->
+    <div class="story-block story-block-highlight">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <div style="background: linear-gradient(135deg, #036536 0%, #062e18 100%); border-radius: 16px; padding: 3.5rem 2.5rem; color: white;">
+          <h3 style="font-family: var(--font-display); font-size: 2.5rem; margin: 0 0 1rem 0; font-weight: 900; line-height: 1.2;">Greenspace Action & Network<br>was born as a movement</h3>
+          <p style="font-size: 1.15rem; margin: 0 0 1.5rem 0; opacity: 0.95; line-height: 1.7;">A growing community of 3,000+ young people across Kenya, unified by one mission:</p>
+          <p style="font-size: 1.3rem; margin: 0; font-weight: 700; color: #00BF62;">Turn silence into influence.<br>Turn youth into leaders of change.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== STORY BLOCK 3: What Drives Us ===== -->
+    <div class="story-block">
+      <div class="section-header" style="margin-bottom: 2.5rem;">
+        <span class="section-tag">Our Philosophy</span>
+        <h3>What Drives Everything We Do</h3>
+      </div>
+      <div class="values-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="story-value-card">
+          <div class="value-icon"><img src="/images/icons8-fire-64.png" alt="fire icon"></div>
+          <h4>Driven by Urgency</h4>
+          <p>Climate change is disrupting lives today. There is no time to wait.</p>
+        </div>
+        <div class="story-value-card">
+          <div class="value-icon"><img src="/images/icons8-scales-64.png" alt="fire icon"></div>
+          <h4>Driven by Equity</h4>
+          <p>Those most affected deserve the strongest voice in the room.</p>
+        </div>
+        <div class="story-value-card">
+          <div class="value-icon"><img src="/images/icons8-stars-50.png" alt="fire icon"></div>
+          <h4>Driven by Possibility</h4>
+          <p>A single empowered young person can shift an entire community.</p>
+        </div>
+      </div>
+      <div style="margin-top: 2.5rem; text-align: center; padding: 2rem; background: var(--green-pale); border-radius: 12px; border-left: 4px solid var(--green-mid);">
+        <p style="margin: 0; font-size: 1.1rem; color: var(--green-dark); font-weight: 600;">We don't train youth to attend meetings. <br>We prepare them to shape systems.</p>
+      </div>
+    </div>
+
+    <!-- ===== POLICY INFLUENCE CARDS ===== -->
+    <div class="story-block">
+      <div class="section-header" style="margin-bottom: 2.5rem;">
+        <span class="section-tag">Impact & Influence</span>
+        <h3>Youth Are Now at the Table</h3>
+      </div>
+      <div class="impact-cards-grid">
+        <div class="impact-card">
+          <div class="impact-card-number">01</div>
+          <h4>Policy Contributions</h4>
+          <p>Youth participants have directly contributed to Kenya's Nationally Determined Contributions (NDCs) under the UNFCCC.</p>
+          <p style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(45,106,79,0.2); font-size: 0.9rem; color: var(--green-mid); font-weight: 600;">5+ national policy processes</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-card-number">02</div>
+          <h4>Recognized Stakeholders</h4>
+          <p>Youth have shifted from symbolic inclusion to recognized policy stakeholders in national climate conversations.</p>
+          <p style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(45,106,79,0.2); font-size: 0.9rem; color: var(--green-mid); font-weight: 600;">Policy spaces now integrated</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-card-number">03</div>
+          <h4>Lived Experience Matters</h4>
+          <p>Climate policy now integrates lived community experiences from rural and ASAL areas, not just technical data.</p>
+          <p style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(45,106,79,0.2); font-size: 0.9rem; color: var(--green-mid); font-weight: 600;">Global + National platforms</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== COMMUNITY IMPACT ===== -->
+    <div class="story-block">
+      <div class="story-grid story-reverse-grid">
+        <div class="story-card-visual">
+          <div class="story-bg-image" style="background: linear-gradient(135deg, #7a4e2d 0%, #3d2b1f 100%);">
+            <div class="story-stat-overlay" style="flex-direction: column; gap: 2rem;">
+              <div style="text-align: center; color: white;">
+                <div style="font-size: 3rem; font-weight: 900; margin-bottom: 0.5rem;">50+</div>
+                <p style="font-size: 0.95rem; margin: 0;">Women trained on kitchen garden model</p>
+              </div>
+              <div style="text-align: center; color: white;">
+                <div style="font-size: 2rem; font-weight: 900; margin-bottom: 0.5rem;">3</div>
+                <p style="font-size: 0.95rem; margin: 0;">Outcomes per family</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="story-card-content">
+          <span class="story-tag">Community</span>
+          <h3>Small Actions, Massive Transformation</h3>
+          <p>From Narok County to beyond, we've seen how practical interventions transform lives and build resilience.</p>
+          <div class="outcome-boxes">
+            <div class="outcome-box">
+              <span class="outcome-emoji"><img src="/images/icons8-security-shield-50.png" alt="food icon"></span>
+              <h4>Food Security</h4>
+              <p>Families gain reliable access to nutritious food year-round.</p>
+            </div>
+            <div class="outcome-box">
+              <span class="outcome-emoji"><img src="/images/icons8-briefcase-50.png" alt="fire icon"></span>
+              <h4>Economic Empowerment</h4>
+              <p>Women generate income and step into leadership roles.</p>
+            </div>
+            <div class="outcome-box">
+              <span class="outcome-emoji"><img src="/images/icons8-world-50.png" alt="fire icon"></span>
+              <h4>Climate Resilience</h4>
+              <p>Communities become more resilient to climate shocks.</p>
+            </div>
+          </div>
+          <p style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid var(--green-light); font-style: italic; color: var(--text-mid);">People begin to see themselves not as victims of climate change, but as <strong>part of the solution.</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== IMPACT STATISTICS CAROUSEL ===== -->
+    <div class="story-block story-stats-block">
+      <div class="section-header" style="margin-bottom: 3rem;">
+        <span class="section-tag">By The Numbers</span>
+        <h3>Measurable Impact</h3>
+      </div>
+
+      <!-- Carousel Container -->
+      <div class="impact-carousel-wrapper">
+        <div class="impact-carousel" id="impactCarousel">
+          
+          <!-- Stat Card 1 -->
+          <div class="impact-carousel-slide">
+            <div class="stat-carousel-card">
+              <div class="stat-card-bg" style="background: linear-gradient(135deg, #2d6a4f 0%, #1a3a2a 100%);">
+                <div class="carousel-card-content">
+                  <div class="carousel-stat-big">1,000+</div>
+                  <p>Youth engaged in dialogues, trainings, and forums</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat Card 2 -->
+          <div class="impact-carousel-slide">
+            <div class="stat-carousel-card">
+              <div class="stat-card-bg" style="background: linear-gradient(135deg, #52b788 0%, #2d6a4f 100%);">
+                <div class="carousel-card-content">
+                  <div class="carousel-stat-big">300+</div>
+                  <p>Youth trained in climate policy, advocacy, and green skills</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat Card 3 -->
+          <div class="impact-carousel-slide">
+            <div class="stat-carousel-card">
+              <div class="stat-card-bg" style="background: linear-gradient(135deg, #7a4e2d 0%, #3d2b1f 100%);">
+                <div class="carousel-card-content">
+                  <div class="carousel-stat-big">100+</div>
+                  <p>Policymakers & state actors reached through structured dialogues</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat Card 4 -->
+          <div class="impact-carousel-slide">
+            <div class="stat-carousel-card">
+              <div class="stat-card-bg" style="background: linear-gradient(135deg, #1a3a2a 0%, #062e18 100%);">
+                <div class="carousel-card-content">
+                  <div class="carousel-stat-big">10+</div>
+                  <p>National & global platforms influenced (Pre-COPs, LCOYs, COP, UNEA)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat Card 5 -->
+          <div class="impact-carousel-slide">
+            <div class="stat-carousel-card">
+              <div class="stat-card-bg" style="background: linear-gradient(135deg, #2d6a4f 0%, #1a3a2a 100%);">
+                <div class="carousel-card-content">
+                  <div class="carousel-stat-big">30%+</div>
+                  <p>Of participants transitioned into policy engagement, employment, or leadership</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat Card 6 -->
+          <div class="impact-carousel-slide">
+            <div class="stat-carousel-card">
+              <div class="stat-card-bg" style="background: linear-gradient(135deg, #52b788 0%, #2d6a4f 100%);">
+                <div class="carousel-card-content">
+                  <div class="carousel-stat-big">20+</div>
+                  <p>Youth-led initiatives and organizations emerging from the network</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat Card 7 -->
+          <div class="impact-carousel-slide">
+            <div class="stat-carousel-card">
+              <div class="stat-card-bg" style="background: linear-gradient(135deg, #7a4e2d 0%, #3d2b1f 100%);">
+                <div class="carousel-card-content">
+                  <div class="carousel-stat-big">1,000+</div>
+                  <p>Trees grown and conserved as part of ecological conservation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat Card 8 -->
+          <div class="impact-carousel-slide">
+            <div class="stat-carousel-card">
+              <div class="stat-card-bg" style="background: linear-gradient(135deg, #1a3a2a 0%, #062e18 100%);">
+                <div class="carousel-card-content">
+                  <div class="carousel-stat-big">5+</div>
+                  <p>National & regional policy processes we've contributed to, including Kenya's NDCs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-btn carousel-btn-prev" id="carouselPrev">❮</button>
+        <button class="carousel-btn carousel-btn-next" id="carouselNext">❯</button>
+
+        <!-- Carousel Indicators (Dots) -->
+        <div class="carousel-indicators" id="carouselIndicators">
+          <button class="carousel-dot active" data-slide="0"></button>
+          <button class="carousel-dot" data-slide="1"></button>
+          <button class="carousel-dot" data-slide="2"></button>
+          <button class="carousel-dot" data-slide="3"></button>
+          <button class="carousel-dot" data-slide="4"></button>
+          <button class="carousel-dot" data-slide="5"></button>
+          <button class="carousel-dot" data-slide="6"></button>
+          <button class="carousel-dot" data-slide="7"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== WHAT HAS CHANGED ===== -->
+    <div class="story-block">
+      <div class="section-header" style="margin-bottom: 2.5rem;">
+        <span class="section-tag">The Shift</span>
+        <h3>Systems Have Changed</h3>
+      </div>
+      <div class="changes-grid">
+        <div class="change-card">
+          <div class="change-number">→</div>
+          <h4>From Symbols to Stakeholders</h4>
+          <p>Youth have shifted from symbolic inclusion to recognized policy stakeholders in climate governance.</p>
+        </div>
+        <div class="change-card">
+          <div class="change-number">→</div>
+          <h4>Lived Experience Integrated</h4>
+          <p>Policy conversations now include real experiences from communities experiencing climate impacts.</p>
+        </div>
+        <div class="change-card">
+          <div class="change-number">→</div>
+          <h4>Global Connections</h4>
+          <p>Youth-policy linkages strengthened across national and global platforms (COP, Pre-COPs, UNEA).</p>
+        </div>
+        <div class="change-card">
+          <div class="change-number">→</div>
+          <h4>Pipeline Emerging</h4>
+          <p>A new generation of skilled youth leaders influencing climate governance and creating opportunities.</p>
+        </div>
+        <div class="change-card">
+          <div class="change-number">→</div>
+          <h4>Doors Opening</h4>
+          <p>Increased access to jobs, global forums, and leadership roles in climate and development sectors.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== THE CHALLENGE ===== -->
+    <div class="story-block">
+      <div style="background: linear-gradient(135deg, #036536 0%, #062e18 100%); border-radius: 16px; padding: 3.5rem 2.5rem; color: white;">
+        <div class="section-header">
+          <span class="section-tag" style="color: #00BF62;">The Reality</span>
+          <h3 style="color: white;">What Still Needs to Happen</h3>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+          <div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.75rem;">Scale Challenge</h4>
+            <p>Thousands of young people are ready to lead. Opportunities for meaningful engagement remain limited.</p>
+          </div>
+          <div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.75rem;">Sustaining Solutions</h4>
+            <p>Community solutions exist but need sustained funding and technical support to reach full impact.</p>
+          </div>
+        </div>
+        
+        <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1.5rem; margin-top: 1.5rem;">
+          <h4 style="font-size: 1.15rem; margin-bottom: 0.75rem;">Maintaining Momentum</h4>
+          <p>Policy spaces are opening, but inconsistently. The risk isn't lack of passion<strong>it's losing momentum.</strong></p>
+        </div>
+      </div>
+    </div>
+
+    
+</section>
+
+
+
+
+
+<!-- Partners  -->
+<section class="partners-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Our Ecosystem</span>
+      <h2>Partners in Impact</h2>
+      <p>We collaborate with government agencies, Development partners, NGOs , Academic Institutions, Private Sectors, and Community Organizations to amplify our impact and scale our solutions.</p>
+    </div>
+
+    <div class="partners-carousel-wrapper">
+      <div class="partners-carousel">
+        <!-- Partner 1 -->
+        <div class="partner-logo-item">
+          <img src="../images/KCB Foundation logo.png" alt="KCB Foundation" />
+        </div>
+
+        <!-- Partner 2 -->
+        <div class="partner-logo-item">
+          <img src="../images/GIZ-Logo.png" alt="GIZ" />
+        </div>
+
+        <!-- Partner 3 -->
+        <div class="partner-logo-item">
+          <img src="../images/Ministry of Environment, Forestry & Climate Change logo (1).png" alt="Ministry of Environment, Forestry & Climate Change" />
+        </div>
+
+        <!-- Partner 4 -->
+        <div class="partner-logo-item">
+          <img src="../images/KIPPRA logo.png" alt="KIPPRA" />
+        </div>
+
+        <!-- Partner 5 -->
+        <div class="partner-logo-item">
+          <img src="../images/Kenya School of Government logo.png" alt="Kenya School of Government" />
+        </div>
+
+        <!-- Partner 6 -->
+        <div class="partner-logo-item">
+          <img src="../images/YALI Regional Leadership Center East Africa logo.png"  alt="YALI Regional Leadership Center East Africa" />
+        </div>
+
+        <!-- Partner 7 -->
+        <div class="partner-logo-item">
+          <img src="../images/State Department for Youth Affairs logo.png" alt="State Department for Youth Affairs" />
+        </div>
+
+        <!-- Partner 8 -->
+        <div class="partner-logo-item">
+          <img src="../images/NGAAF logo.png" alt="NGAAF" />
+        </div>
+
+        <!-- Partner 9 -->
+        <div class="partner-logo-item">
+          <img src="../images/Embassy of Azerbaijan logo.png" alt="Embassy of Azerbaijan" />
+        </div>
+
+        <!-- Partner 10 -->
+        <div class="partner-logo-item">
+          <img src="../images/County Government of Vihiga logo.png" alt="County Government of Vihiga" />
+        </div>
+
+         <!-- Partner 11 -->
+        <div class="partner-logo-item">
+          <img src="../images/Feion Green Ventures logo.png" alt="Feion Green Ventures" />
+        </div>
+
+         <!-- Partner 12 -->
+        <div class="partner-logo-item">
+          <img src="../images/County Government of Kisumu logo.png" alt="County Government of Kisumu " />
+        </div>
+
+         <!-- Partner 13 -->
+        <div class="partner-logo-item">
+          <img src="../images/World Food Forum logo.png" alt="World Food Forum " />
+        </div>
+
+        <!-- Partner 14 -->
+        <div class="partner-logo-item">
+          <img src="../images/WWF-Kenya logo.png" alt="WWF-Kenya " />
+        </div>
+
+        <!-- Duplicate the items for seamless loop (required for infinite scroll) -->
+        <div class="partner-logo-item">
+          <img src="../images/KCB Foundation logo.png" alt="KCB Foundation" />
+        </div>
+        <div class="partner-logo-item">
+          <img src="../images/GIZ-Logo.png" alt="GIZ" />
+        </div>
+        <div class="partner-logo-item">
+          <img src="../images/Ministry of Environment, Forestry & Climate Change logo (1).png" alt="Ministry of Environment, Forestry & Climate Change" />
+        </div>
+        <div class="partner-logo-item">
+          <img src="../images/KIPPRA logo.png" alt="KIPPRA" />
+        </div>
+        <div class="partner-logo-item">
+          <img src="../images/Kenya School of Government logo.png" alt="Kenya School of Government" />
+        </div>
+        <div class="partner-logo-item">
+         <img src="../images/YALI Regional Leadership Center East Africa logo.png"  alt="YALI Regional Leadership Center East Africa" />
+        </div>
+        <div class="partner-logo-item">
+          <img src="../images/State Department for Youth Affairs logo.png" alt="State Department for Youth Affairs" />
+        </div>
+        <div class="partner-logo-item">
+          <img src="../images/NGAAF logo.png" alt="NGAAF" />
+        </div>
+        <div class="partner-logo-item">
+          <img src="../images/Embassy of Azerbaijan logo.png" alt="Embassy of Azerbaijan" />
+        </div>
+        <div class="partner-logo-item">
+          <img src="../images/County Government of Vihiga logo.png" alt="County Government of Vihiga" />
+        </div>
+        <div class="partner-logo-item">
+          <img src="../images/Feion Green Ventures logo.png" alt="Feion Green Ventures" />
+        </div>
+        <div class="partner-logo-item">
+          <img src="../images/County Government of Kisumu logo.png" alt="County Government of Kisumu " />
+        </div>
+        <div class="partner-logo-item">
+          <img src="../images/World Food Forum logo.png" alt="World Food Forum " />
+        </div>
+        <div class="partner-logo-item">
+          <img src="../images/WWF-Kenya logo.png" alt="WWF-Kenya " />
+        </div>
+      </div>
+      <div class="carousel-fade-left"></div>
+      <div class="carousel-fade-right"></div>
+    </div>
+
+    
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values-section">
+  <div class="container">
+    <div class="values-grid">
+      <div class="values-text">
+        <span class="section-tag">Our Core Values</span>
+        <h2>ACTS</h2>
+        <p>Everything we do is guided by four core principles that keep us grounded, collaborative, and impact-focused.</p>
+        <a href="about.html" class="btn-outline-green">Learn More About Us</a>
+      </div>
+      <div class="values-list">
+        <div class="value-item">
+          <span class="value-letter">A</span>
+          <div>
+            <strong>Accountability</strong>
+            <p>We own our actions and report transparently to communities and partners.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <span class="value-letter">C</span>
+          <div>
+            <strong>Collaboration</strong>
+            <p>No one solves climate change alone. We partner deeply and widely.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <span class="value-letter">T</span>
+          <div>
+            <strong>Transformation</strong>
+            <p>We pursue structural, lasting change — not just short-term outputs.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <span class="value-letter">S</span>
+          <div>
+            <strong>Sustainability</strong>
+            <p>Every program is designed with long-term ecological and social impact in mind.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <h2>Ready to Make a Difference?</h2>
+        <p>Join hundreds of youth taking real action on climate change across Kenya. Whether you volunteer, donate, or partner , your contribution matters.</p>
+      </div>
+      <div class="cta-btns">
+        <a href="volunteer.html" class="btn-cta-primary">Become a Volunteer</a>
+        <a href="donate.html" class="btn-cta-secondary">Support Our Work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+ <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="GAN Logo" class="footer-logo">
+          <p>Greenspace Action and Network <br> Rooted in action, transforming livelihoods.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/GreenspaceActionNetwork" class="social-link" aria-label="Facebook" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://x.com/greenspaceyouth" class="social-link" aria-label="X / Twitter" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/greenspaceactionnetwork" class="social-link" aria-label="Instagram" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/youth-greenspace-action-network-org/" class="social-link" aria-label="LinkedIn" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="programs.html#tujenge">Tujenge Jamii</a></li>
+            <li><a href="programs.html#fellowship">Climate Fellowship</a></li>
+            <li><a href="programs.html#innovation">Applied Innovation</a></li>
+            <li><a href="programs.html#diplomacy">Eco-Diplomacy</a></li>
+            <li><a href="programs.html#restoration">Env. Restoration</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p><img src="assets/phone-incoming-bold.svg" alt="call icon">+254 745 238 860</p>
+          <p><img src="assets/envelope-simple-bold.svg" alt="email icon">info@greenspaceaction.org</p>
+          <p><img src="assets/globe-bold.svg" alt="website icon">www.greenspaceaction.org</p>
+          <p><img src="assets/map-pin-area-bold.svg" alt="location icon">Nairobi, Kenya <br>P.O Box 300-00100<br>
+Argwings Kodhek Rd.<br>
+Nyaku House, Ist Floor Suite 18</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Greenspace Action and Network. All rights reserved.</p>
+        
+      </div>
+    </div>
+  </footer>
+  
+<script src="js/main.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js" defer></script><script src="js/main.js"></script>
+<script>
+// Hide loading screen after page loads
+window.addEventListener('load', function() {
+  const loadingScreen = document.getElementById('loading-screen');
+  if (loadingScreen) {
+    setTimeout(() => {
+      loadingScreen.style.opacity = '0';
+      loadingScreen.style.visibility = 'hidden';
+      loadingScreen.style.transition = 'all 0.5s ease';
+    }, 1500); // Show loading screen for 1.5 seconds
+  }
+});
+
+// Also hide immediately if page is cached (instant load)
+if (document.readyState === 'complete') {
+  const loadingScreen = document.getElementById('loading-screen');
+  if (loadingScreen) {
+    loadingScreen.style.display = 'none';
+  }
+}
+// ── Hero Background Carousel ────────────────────────────────────────────
+(function () {
+  const slides   = document.querySelectorAll('.carousel-slide');
+  const dots     = document.querySelectorAll('.carousel-dots .dot');
+  const INTERVAL = 5000;
+  let current    = 0;
+  let timer      = null;
+
+  if (!slides.length) return;
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    if (dots[current]) {
+      dots[current].classList.remove('active');
+      dots[current].setAttribute('aria-selected', 'false');
+    }
+
+    current = (n + slides.length) % slides.length;
+
+    slides[current].classList.add('active');
+    if (dots[current]) {
+      dots[current].classList.add('active');
+      dots[current].setAttribute('aria-selected', 'true');
+    }
+  }
+
+  function startTimer() {
+    clearInterval(timer);
+    timer = setInterval(function () { goTo(current + 1); }, INTERVAL);
+  }
+
+  dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () {
+      goTo(i);
+      startTimer(); // reset countdown on manual pick
+    });
+  });
+
+  startTimer(); // kick off auto-play immediately
+})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.getElementById('impactCarousel');
+  const prevBtn = document.getElementById('carouselPrev');
+  const nextBtn = document.getElementById('carouselNext');
+  const dots = document.querySelectorAll('.carousel-dot');
+  let currentSlide = 0;
+  const totalSlides = document.querySelectorAll('.impact-carousel-slide').length;
+  let autoPlayInterval;
+
+  function showSlide(n) {
+    const slides = document.querySelectorAll('.impact-carousel-slide');
+    
+    if (n >= totalSlides) {
+      currentSlide = 0;
+    } else if (n < 0) {
+      currentSlide = totalSlides - 1;
+    }
+
+    // Hide all slides
+    slides.forEach(slide => {
+      slide.style.display = 'none';
+      slide.classList.remove('active');
+    });
+
+    // Show current slide
+    slides[currentSlide].style.display = 'block';
+    slides[currentSlide].classList.add('active');
+
+    // Update dots
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentSlide);
+    });
+  }
+
+  function nextSlide() {
+    currentSlide++;
+    showSlide(currentSlide);
+    resetAutoPlay(); // Reset timer when user clicks
+  }
+
+  function prevSlide() {
+    currentSlide--;
+    showSlide(currentSlide);
+    resetAutoPlay(); // Reset timer when user clicks
+  }
+
+  function autoNextSlide() {
+    currentSlide++;
+    showSlide(currentSlide);
+  }
+
+  function startAutoPlay() {
+    autoPlayInterval = setInterval(autoNextSlide, 3000); // Change slide every 5 seconds
+  }
+
+  function resetAutoPlay() {
+    clearInterval(autoPlayInterval);
+    startAutoPlay(); // Restart the timer
+  }
+
+  // Event listeners
+  nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', prevSlide);
+
+  // Dot navigation
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', function() {
+      currentSlide = index;
+      showSlide(currentSlide);
+      resetAutoPlay(); // Reset timer when dot is clicked
+    });
+  });
+
+  // Stop autoplay on hover
+  carousel.addEventListener('mouseenter', function() {
+    clearInterval(autoPlayInterval);
+  });
+
+  // Resume autoplay when mouse leaves
+  carousel.addEventListener('mouseleave', function() {
+    startAutoPlay();
+  });
+
+  // Initialize
+  showSlide(currentSlide);
+  startAutoPlay(); // Start automatic scrolling
+});
+
+document.querySelectorAll('a[href="#ourStory"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const storySection = document.getElementById('ourStory');
+    if (storySection) {
+      storySection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate – GAN</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<button id="scrollBtn" class="scroll-btn">
+  <span id="scrollIcon">↑</span>
+</button>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="GAN Logo"/><span>GAN</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+      <li><a href="programs.html">Programs</a></li><li><a href="team.html">Team</a></li><li>
+      <li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-ctas">
+      <a href="volunteer.html" class="btn-outline">Volunteer</a>
+      <a href="donate.html" class="btn-solid">Donate</a>
+    </div>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="team.html">Team</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="donate.html">Donate</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="section-tag">Support Our Work</span>
+    <h1>Fund Sustainability in Motion</h1>
+    <p>Every contribution helps us train youth leaders, restore ecosystems, and build climate resilient communities across Kenya.</p>
+  </div>
+</section>
+
+<section class="donate-section">
+  <div class="container">
+
+    <div class="donate-intro">
+      <span class="section-tag">Your Impact</span>
+      <h2>What Your Donation Does</h2>
+      <p>GAN is a registered NGO committed to transparent financial management. Here's what your support directly funds.</p>
+    </div>
+
+    <!-- Impact cards update dynamically based on selected currency -->
+    <div class="impact-grid" id="impactGrid">
+      <div class="impact-card">
+        <div class="impact-amount" id="impact1">Ksh 500</div>
+        <p>Grow 5 trees in a degraded ecosystem</p>
+      </div>
+      <div class="impact-card">
+        <div class="impact-amount" id="impact2">Ksh 2,000</div>
+        <p>Capacity Building</p>
+      </div>
+      <div class="impact-card">
+        <div class="impact-amount" id="impact3">Ksh 5,000</div>
+        <p>Supports our Operations</p>
+      </div>
+      <div class="impact-card">
+        <div class="impact-amount" id="impact4">Ksh 20,000</div>
+        <p>Funds a community resilience program</p>
+      </div>
+    </div>
+
+    <div class="donate-form-wrap">
+      <h3>Make a Donation</h3>
+
+      <!-- CURRENCY SELECTOR -->
+      <div class="form-group">
+        <label>Currency</label>
+        <div class="amount-options" style="grid-template-columns: repeat(3, 1fr);">
+          <button class="amount-btn active" onclick="setCurrency(this, 'KES')">KES</button>
+          <button class="amount-btn" onclick="setCurrency(this, 'USD')">USD</button>
+          <button class="amount-btn" onclick="setCurrency(this, 'EUR')">EUR</button>
+        </div>
+      </div>
+
+      <!-- AMOUNT SELECTOR (populated by JS) -->
+      <div class="form-group">
+        <label>Select Amount</label>
+        <div class="amount-options" id="amountOptions">
+          <!-- filled dynamically -->
+        </div>
+      </div>
+
+      <!-- AMOUNT INPUT -->
+      <div class="form-group">
+        <label id="amtLabel">Amount (KES)</label>
+        <input type="number" placeholder="2000" id="donationAmount" value="2000"/>
+      </div>
+
+      <!-- FREQUENCY -->
+      <div class="form-group">
+        <label>Donation Frequency</label>
+        <select>
+          <option>One time donation</option>
+          <option>Monthly recurring</option>
+          <option>Quarterly</option>
+          <option>Annual</option>
+        </select>
+      </div>
+
+      <!-- PROGRAM -->
+      <div class="form-group">
+        <label>Dedicate to a Program (Optional)</label>
+        <select>
+          <option>Where most needed</option>
+          <option>Community Climate Resilience</option>
+          <option>Youth Leadership &amp; Fellowship</option>
+          <option>Applied Innovation</option>
+          <option>Environmental Restoration</option>
+          <option>Eco-Diplomacy</option>
+          <option>Operations</option>
+        </select>
+      </div>
+
+      <!-- NAME -->
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="Jane"/>
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Doe"/>
+        </div>
+      </div>
+
+      <!-- EMAIL -->
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="jane@example.com"/>
+      </div>
+
+      <!-- PAYMENT METHOD -->
+      <div class="form-group">
+        <label>Payment Method</label>
+        <div class="amount-options" style="grid-template-columns: repeat(4, 1fr);">
+          <button class="amount-btn active" data-pay="mpesa" onclick="setPay(this)">M-Pesa</button>
+          <button class="amount-btn" data-pay="paypal" onclick="setPay(this)">PayPal</button>
+          <button class="amount-btn" data-pay="stripe" onclick="setPay(this)">Card (Stripe)</button>
+          <button class="amount-btn" data-pay="bank" onclick="setPay(this)">Bank Transfer</button>
+        </div>
+        <p id="payNote" style="font-size:0.82rem; color:var(--text-light); margin-top:0.75rem; line-height:1.6; background:var(--green-pale); border-radius:8px; padding:0.75rem 1rem; display:none;"></p>
+      </div>
+
+      <button class="btn-submit" id="submitBtn" onclick="handlePayment()">Proceed to Payment</button>
+
+      <p style="text-align:center; font-size:0.82rem; color:var(--text-light); margin-top:1rem;">
+        🔒 Your donation is secure. GAN is a registered Kenyan NGO and all funds are transparently managed.
+      </p>
+    </div>
+
+    <!-- Other Ways to Give -->
+    <div style="max-width:600px; margin:3rem auto 0; background:var(--green-pale); border-radius:12px; padding:2rem; text-align:center;">
+      <strong style="display:block; color:var(--green-dark); margin-bottom:0.75rem;">Other Ways to Give</strong>
+      <p style="font-size:0.9rem; color:var(--text-mid); line-height:1.7;">
+        For bank transfers, M-Pesa Paybill, or international wire transfers, please contact us at <strong>info@greenspaceaction.org</strong> or call <strong>+254 745 238 860</strong>.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="GAN Logo" class="footer-logo">
+        <p>Greenspace Action and Network <br> Rooted in action, transforming livelihoods.</p>
+       <div class="social-links">
+            <a href="https://www.facebook.com/GreenspaceActionNetwork" class="social-link" aria-label="Facebook" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://x.com/greenspaceyouth" class="social-link" aria-label="X / Twitter" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/greenspaceactionnetwork" class="social-link" aria-label="Instagram" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/youth-greenspace-action-network-org/" class="social-link" aria-label="LinkedIn" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          
+          </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="programs.html#tujenge">Tujenge Jamii</a></li>
+          <li><a href="programs.html#fellowship">Climate Fellowship</a></li>
+          <li><a href="programs.html#innovation">Applied Innovation</a></li>
+          <li><a href="programs.html#diplomacy">Eco-Diplomacy</a></li>
+          <li><a href="programs.html#restoration">Env. Restoration</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><img src="assets/phone-incoming-bold.svg" alt="call icon">+254 745 238 860</p>
+        <p><img src="assets/envelope-simple-bold.svg" alt="email icon">info@greenspaceaction.org</p>
+        <p><img src="assets/globe-bold.svg" alt="website icon">www.greenspaceaction.org</p>
+        <p><img src="assets/map-pin-area-bold.svg" alt="location icon">Nairobi, Kenya <br>P.O Box 300-00100<br>
+Argwings Kodhek Rd.<br>
+Nyaku House, Ist Floor Suite 18</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Greenspace Action and Network. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ── Data ── */
+  const presets = {
+    KES: [500, 2000, 5000, 20000],
+    USD: [5,   15,   40,   150],
+    EUR: [5,   15,   35,   130]
+  };
+
+  const impactLabels = {
+    KES: ['Ksh 500', 'Ksh 2,000', 'Ksh 5,000', 'Ksh 20,000'],
+    USD: ['$5',      '$15',       '$40',        '$150'],
+    EUR: ['€5',      '€15',       '€35',        '€130']
+  };
+
+  const payNotes = {
+    mpesa:  'You will be prompted to enter your M-Pesa number and confirm via your phone. Paybill details will be shown on the next screen.',
+    paypal: 'You will be redirected to PayPal to complete your donation securely. No PayPal account required — you can also pay by card through PayPal.',
+    stripe: 'You will be redirected to our secure Stripe checkout. Accepts Visa, Mastercard, Amex, and Google/Apple Pay.',
+    bank:   'Bank account details will be shown on the next screen. For international bank transfers, please contact info@greenspaceaction.org.'
+  };
+
+  const submitLabels = {
+    mpesa:  'Pay with M-Pesa',
+    paypal: 'Continue to PayPal',
+    stripe: 'Pay by Card',
+    bank:   'Get Bank Details'
+  };
+
+  let currency = 'KES';
+
+  /* ── Build amount buttons ── */
+  function buildAmounts() {
+    const grid = document.getElementById('amountOptions');
+    grid.innerHTML = '';
+    presets[currency].forEach((v, i) => {
+      const b = document.createElement('button');
+      b.className = 'amount-btn' + (i === 1 ? ' active' : '');
+      b.textContent = currency === 'KES' ? v.toLocaleString() : v;
+      b.onclick = () => selectAmount(b, v);
+      grid.appendChild(b);
+    });
+    document.getElementById('donationAmount').value = presets[currency][1];
+  }
+
+  /* ── Update impact card labels ── */
+  function updateImpactCards() {
+    impactLabels[currency].forEach((label, i) => {
+      document.getElementById('impact' + (i + 1)).textContent = label;
+    });
+  }
+
+  /* ── Currency switcher ── */
+  function setCurrency(btn, cur) {
+    document.querySelectorAll('[onclick^="setCurrency"]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currency = cur;
+    document.getElementById('amtLabel').textContent = 'Amount (' + cur + ')';
+    buildAmounts();
+    updateImpactCards();
+  }
+
+  /* ── Amount preset selection ── */
+  function selectAmount(btn, val) {
+    document.querySelectorAll('#amountOptions .amount-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('donationAmount').value = val;
+  }
+
+  /* ── Payment method selection ── */
+  function setPay(btn) {
+    document.querySelectorAll('[data-pay]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const note = document.getElementById('payNote');
+    note.textContent = payNotes[btn.dataset.pay] || '';
+    note.style.display = 'block';
+    document.getElementById('submitBtn').textContent = submitLabels[btn.dataset.pay] || 'Proceed to Payment';
+  }
+
+  /* ── Init ── */
+  buildAmounts();
+  setPay(document.querySelector('[data-pay="mpesa"]'));
+
+  
+function handlePayment() {
+  const amount = document.getElementById("donationAmount").value;
+  const method = document.querySelector("[data-pay.active]").dataset.pay;
+
+  if (!amount || amount <= 0) {
+    alert("Please enter a valid donation amount");
+    return;
+  }
+
+  // 🔐 Optional minimum
+  if (amount < 100) {
+    alert("Minimum donation is 100");
+    return;
+  }
+
+  if (method === "stripe") {
+    redirectToStripe(amount);
+  }
+
+  else if (method === "paypal") {
+    redirectToPayPal(amount);
+  }
+
+  else if (method === "mpesa") {
+    showMpesaPopup(amount);
+  }
+
+  else if (method === "bank") {
+    showBankDetails();
+  }
+}
+
+/* ── STRIPE ── */
+function redirectToStripe(amount) {
+  // 🔁 REPLACE WITH YOUR STRIPE PAYMENT LINK
+  const baseUrl = "https://buy.stripe.com/YOUR_LINK";
+
+  // Stripe supports prefilled amount in some setups
+  window.location.href = baseUrl;
+}
+
+/* ── PAYPAL ── */
+function redirectToPayPal(amount) {
+  // 🔁 REPLACE WITH YOUR PAYPAL LINK
+  const baseUrl = "https://www.paypal.com/donate/?hosted_button_id=YOUR_ID";
+
+  window.location.href = baseUrl;
+}
+
+/* ── MPESA ── */
+function showMpesaPopup(amount) {
+  const message = `
+📱 M-Pesa Payment Instructions
+
+Paybill: 123456
+Account: GAN DONATION
+Amount: KES ${amount}
+
+1. Go to M-Pesa
+2. Select Lipa na M-Pesa
+3. Enter Paybill
+4. Enter Account Number
+5. Confirm payment
+
+After payment, send confirmation to:
+info@greenspaceaction.org
+`;
+
+  showPopup(message);
+}
+
+/* ── BANK ── */
+function showBankDetails() {
+  const message = `
+🏦 Bank Transfer Details
+
+Bank: XYZ Bank
+Account Name: Greenspace Action Network
+Account Number: 0123456789
+SWIFT Code: XXXX
+
+Send proof of payment to:
+info@greenspaceaction.org
+`;
+
+  showPopup(message);
+}
+
+/* ── NICE POPUP ── */
+function showPopup(message) {
+  let popup = document.createElement("div");
+  popup.innerText = message;
+
+  popup.style.position = "fixed";
+  popup.style.top = "50%";
+  popup.style.left = "50%";
+  popup.style.transform = "translate(-50%, -50%)";
+  popup.style.background = "#fff";
+  popup.style.color = "#111";
+  popup.style.padding = "20px";
+  popup.style.borderRadius = "12px";
+  popup.style.boxShadow = "0 10px 40px rgba(0,0,0,0.2)";
+  popup.style.whiteSpace = "pre-line";
+  popup.style.zIndex = "9999";
+  popup.style.maxWidth = "320px";
+
+  document.body.appendChild(popup);
+
+  setTimeout(() => popup.remove(), 8000);
+}
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

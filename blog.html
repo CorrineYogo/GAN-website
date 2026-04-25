@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog & Insights – GAN</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<button id="scrollBtn" class="scroll-btn">
+  <span id="scrollIcon">↑</span>
+</button>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="GAN Logo"/><span>GAN</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="team.html">Team</a></li>
+     
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-ctas">
+      <a href="volunteer.html" class="btn-outline">Volunteer</a>
+      <a href="donate.html" class="btn-solid">Donate</a>
+    </div>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="team.html">Team</a>
+   
+    <a href="contact.html">Contact</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="donate.html">Donate</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="section-tag">Insights & Stories</span>
+    <h1>Blog & Resources</h1>
+    <p>Thought leadership on climate action, community resilience, and youth leadership. Featuring insights from our team, research findings, and guest contributions.</p>
+  </div>
+</section>
+
+<!-- NEWSLETTER SIGNUP BANNER -->
+<section class="newsletter-banner">
+  <div class="container">
+    <div class="newsletter-inner">
+      <div class="newsletter-text">
+        <h2>Stay in the Loop</h2>
+        <p>Get monthly insights on climate action, sustainability, and community resilience directly to your inbox.</p>
+      </div>
+      <form class="newsletter-form" action="#" method="POST">
+        <input type="email" placeholder="your@email.com" required/>
+        <button type="submit" class="btn-solid">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER & SORT -->
+<section class="blog-filters">
+  <div class="container">
+    <div class="filters-wrapper">
+      <span class="filter-label">Filter by:</span>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="article">Articles</button>
+        <button class="filter-btn" data-filter="newsletter">Newsletters</button>
+        <button class="filter-btn" data-filter="research">Research</button>
+        <button class="filter-btn" data-filter="case-study">Case Studies</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED POST -->
+<section class="blog-featured">
+  <div class="container">
+    <div class="featured-post">
+      <div class="featured-image">
+        <img src="/images/Tomas.jpeg" alt="Featured Article"/>
+        <span class="featured-badge">Featured</span>
+      </div>
+      <div class="featured-content">
+        <div class="post-meta">
+          <span class="post-type article">Article</span>
+          <span class="post-date">March 15, 2026</span>
+          <span class="post-author">By Thomas Hurdson</span>
+        </div>
+        <h2 class="featured-title">Youth Leadership in Climate Diplomacy</h2>
+        <p class="featured-excerpt">An in-depth analysis of how young climate advocates are shaping global climate policy and what this means for community-led action in Kenya and across Africa.</p>
+        <div class="featured-tags">
+          <span class="tag">Climate Policy</span>
+          <span class="tag">Youth Leadership</span>
+          <span class="tag">COP28</span>
+        </div>
+        
+        <a href="blog_post.html" class="btn-outline-green">Read Full Article →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG GRID -->
+<section class="blog-grid-section">
+  <div class="container">
+    <div class="blog-grid">
+
+      <!-- POST 1: Article -->
+      <article class="blog-card" data-filter="article">
+        <div class="blog-image">
+          <img src="/images/Jamii.jpeg" alt="Blog Post"/>
+          <span class="post-type article">Article</span>
+        </div>
+        <div class="blog-content">
+          <div class="post-meta">
+            <span class="post-date">March 10, 2026</span>
+            <span class="post-author">By Collins Lugongo</span>
+          </div>
+          <h3><a href="blog-post-1.html">Building Climate Smart Agriculture in Arid Regions</a></h3>
+          <p>Exploring practical approaches to sustainable farming that improve resilience to drought while maintaining productivity.</p>
+          <div class="post-tags">
+            <span class="tag">Agriculture</span>
+            <span class="tag">Resilience</span>
+          </div>
+          <a href="blog-post-1.html" class="read-more">Read More →</a>
+        </div>
+      </article>
+
+      <!-- POST 2: Newsletter -->
+      <article class="blog-card" data-filter="newsletter">
+        <div class="blog-image">
+          <img src="/images/appliedinnovation.jpeg" alt="Newsletter"/>
+          <span class="post-type newsletter">Newsletter</span>
+        </div>
+        <div class="blog-content">
+          <div class="post-meta">
+            <span class="post-date">March 2026</span>
+            <span class="post-author">GAN Team</span>
+          </div>
+          <h3><a href="blog-post-2.html">GAN Monthly: February Impact Report</a></h3>
+          <p>This month we planted 500 trees, trained 50 youth fellows, and launched our new climate tech innovation challenge.</p>
+          <div class="post-tags">
+            <span class="tag">Monthly Update</span>
+            <span class="tag">Impact Report</span>
+          </div>
+          <a href="blog-post-2.html" class="read-more">Read More →</a>
+        </div>
+      </article>
+
+      <!-- POST 3: Research Paper -->
+      <article class="blog-card" data-filter="research">
+        <div class="blog-image">
+          <img src="/images/researc.jpeg" alt="Research"/>
+          <span class="post-type research">Research</span>
+        </div>
+        <div class="blog-content">
+          <div class="post-meta">
+            <span class="post-date">February 28, 2026</span>
+            <span class="post-author">GAN & University of Nairobi</span>
+          </div>
+          <h3><a href="blog-post-3.html">Community Perceptions of Climate Change in Semi-Arid Kenya: A Qualitative Study</a></h3>
+          <p>Academic research examining how communities in Isiolo County perceive and adapt to climate change. Full paper available for download.</p>
+          <div class="post-tags">
+            <span class="tag">Research</span>
+            <span class="tag">Academic</span>
+            <span class="tag">PDF Download</span>
+          </div>
+          
+          <a href="blog-post-3.html" class="read-more">Read More →</a>
+        </div>
+      </article>
+
+      
+    </div>
+
+    <!-- LOAD MORE / PAGINATION -->
+    <div class="blog-pagination">
+      <button class="btn-outline-green">Load More Articles</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <h2>Have a Story to Share?</h2>
+        <p>We welcome guest contributions, research collaborations, and case studies from partners and community members.</p>
+      </div>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn-cta-primary">Submit a Guest Post</a>
+        <a href="#newsletter-banner" class="btn-cta-secondary">Subscribe to Newsletter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="GAN Logo" class="footer-logo">
+          <p>Greenspace Action and Network <br> Rooted in action, transforming livelihoods.</p>
+         <div class="social-links">
+            <a href="https://www.facebook.com/GreenspaceActionNetwork" class="social-link" aria-label="Facebook" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://x.com/greenspaceyouth" class="social-link" aria-label="X / Twitter" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/greenspaceactionnetwork" class="social-link" aria-label="Instagram" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/youth-greenspace-action-network-org/" class="social-link" aria-label="LinkedIn" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="team.html">Our Team</a></li>
+           
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="programs.html#tujenge">Tujenge Jamii</a></li>
+            <li><a href="programs.html#fellowship">Climate Fellowship</a></li>
+            <li><a href="programs.html#innovation">Applied Innovation</a></li>
+            <li><a href="programs.html#diplomacy">Eco-Diplomacy</a></li>
+            <li><a href="programs.html#restoration">Env. Restoration</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p><img src="assets/phone-incoming-bold.svg" alt="call icon">+254 745 238 860</p>
+          <p><img src="assets/envelope-simple-bold.svg" alt="email icon">info@greenspaceaction.org</p>
+          <p><img src="assets/globe-bold.svg" alt="website icon">www.greenspaceaction.org</p>
+          <p><img src="assets/map-pin-area-bold.svg" alt="location icon">Nairobi, Kenya</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Greenspace Action and Network. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+<script src="js/main.js"></script>
+
+<script>
+// Filter functionality
+document.querySelectorAll('.filter-btn').forEach(button => {
+  button.addEventListener('click', function() {
+    const filter = this.getAttribute('data-filter');
+    
+    // Update active button
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    this.classList.add('active');
+    
+    // Filter posts
+    document.querySelectorAll('.blog-card').forEach(card => {
+      if (filter === 'all' || card.getAttribute('data-filter') === filter) {
+        card.style.display = 'block';
+        setTimeout(() => card.classList.add('show'), 10);
+      } else {
+        card.classList.remove('show');
+        setTimeout(() => card.style.display = 'none', 300);
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
+   
